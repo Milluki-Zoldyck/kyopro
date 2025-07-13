@@ -1,1 +1,10 @@
-
+bool isPalindrome(int x, int a){
+  string  s;
+  while(x){
+    s += '0' + x%a;
+    x /= a;
+  }
+  string rs=s;
+  reverse(rs.begin(), rs.end())
+  return s == rs;
+}
