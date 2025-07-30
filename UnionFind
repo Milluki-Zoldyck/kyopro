@@ -1,0 +1,34 @@
+class UnionFind{
+    public:
+    int par[100009];
+    int siz[100009];
+
+    void init(int n){
+        rep(i,n) {
+            par[i+1]=-1;
+            siz[i+1]=1;
+        }
+    }
+
+    int root(int c){
+        if(par[c]!=-1) c = root(par[c]); 
+        return c;
+    }
+
+    void unite(int u,int v){
+        int ru = root(u),rv = root(v);
+        if(ru == rv) return;
+        if(siz[ru]>=siz[rv]){
+            par[rv] = ru;
+            siz[ru] += siz[rv];
+        }
+        else{
+            par[ru] = root(rv);
+            siz[rv] += siz[ru];
+        }
+    }
+
+    bool same(int u,int v){
+        return root(u)==root(v);
+    }
+};
