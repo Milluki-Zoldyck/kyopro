@@ -1,0 +1,12 @@
+int main() {
+    int n;
+    cin>>n;
+    vector<int> p(n);
+    iota(p.begin(),p.end(),0);
+    do{
+        rep(i,n){
+            cout<<p[i];
+        }
+        cout<<endl;
+    }while(next_permutation(p.begin(),p.end()));
+}
