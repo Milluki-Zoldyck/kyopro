@@ -1,3 +1,4 @@
+//UnionFindのこと
 #ifndef ATCODER_DSU_HPP
 #define ATCODER_DSU_HPP 1
 
