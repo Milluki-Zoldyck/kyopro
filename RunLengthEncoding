@@ -1,1 +1,19 @@
+https://atcoder.jp/contests/past17-open/tasks/past17_e
+ランレングス圧縮の例
 
+int main() {
+  string S;
+  cin >> S;
+  vector<pair<char, int>> rle;
+  for (char c : S) {
+    if (rle.empty() or rle.back().first != c) {
+      rle.emplace_back(c, 1);
+    } else {
+      rle.back().second++;
+    }
+  }
+  for (int i = 0; i < (int)rle.size(); i++) {
+    cout << rle[i].first << " ";
+    cout << rle[i].second << " \n"[i + 1 == (int)rle.size()];
+  }
+}
