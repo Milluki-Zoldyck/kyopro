@@ -1,0 +1,8 @@
+int ok=0,ng=n;
+while(ok+1<ng){
+  int mid=(ok+ng)/2;
+  if(a[mid]>=k) ng=mid;
+  else ok=mid;
+}
+if(ok==n-1) cout<<-1<<endl;
+else cout<<ng<<endl;
