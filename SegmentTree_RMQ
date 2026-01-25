@@ -26,5 +26,6 @@ class SegmentTree{
     int m = (a+b)/2;
     int ansL = query(l,r,a,m,u*2);
     int ansR = query(l,r,a,b,u*2+1);
+    return max(ansL, ansR);
   }
 }
