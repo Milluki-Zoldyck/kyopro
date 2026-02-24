@@ -1,5 +1,5 @@
 // xをa進数に変換したときに回文かどうかを返す。
-bool isPalindrome(int x, int a){
+bool isPalindrome(ll x, int a){
     string  s;
     while(x){
         s += '0' + x%a;
